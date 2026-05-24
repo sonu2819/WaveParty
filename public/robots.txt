@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://myvibewatch.vercel.app/sitemap.xml
+Sitemap: https://waveparty.vercel.app/sitemap.xml
