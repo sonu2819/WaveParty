@@ -38,26 +38,101 @@
 
 
 
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import Navbar from "../components/Navbar";
 
-export default function Home() {
+// export default function Home() {
 
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
-  const [roomId, setRoomId] = useState("");
+//   const [roomId, setRoomId] = useState("");
 
-  const createRoom = () => {
-    const id = Math.random().toString(36).substring(2, 8);
-    navigate(`/room/${id}`);
-  };
+//   const createRoom = () => {
+//     const id = Math.random().toString(36).substring(2, 8);
+//     navigate(`/room/${id}`);
+//   };
 
-  const joinRoom = () => {
-    if (!roomId.trim()) return;
-    navigate(`/room/${roomId}`);
-  };
+//   const joinRoom = () => {
+//     if (!roomId.trim()) return;
+//     navigate(`/room/${roomId}`);
+//   };
 
-  return (
+//   return (
+//     <Navbar /> </>
+//     <div className="home-page">
+
+//       {/* background glow */}
+//       <div className="hero-glow"></div>
+
+//       <div className="home-card">
+
+//         <h1 className="logo">
+//           WaveParty
+//         </h1>
+
+//         <p className="subtitle">
+//           Watch YouTube videos together in real-time.
+//         </p>
+
+//         {/* create */}
+//         <button
+//           className="main-btn"
+//           onClick={createRoom}
+//         >
+//           Create Room
+//         </button>
+
+//         {/* divider */}
+//         <div className="divider">
+//           OR
+//         </div>
+
+//         {/* join */}
+//         <div className="join-box">
+
+//           <input
+//             type="text"
+//             placeholder="Enter room code"
+//             value={roomId}
+//             onChange={(e) => setRoomId(e.target.value)}
+//           />
+
+//           <button onClick={joinRoom}>
+//             Join Room
+//           </button>
+
+//         </div>
+
+//       </div>
+
+//     </div>
+//   );
+// }
+ import { useNavigate } from "react-router-dom";
+ import { useState } from "react";
+ import Navbar from "../components/Navbar";
+ import Footer from "../components/Footer";
+
+ export default function Home() {
+
+   const navigate = useNavigate();
+
+   const [roomId, setRoomId] = useState("");
+
+   const createRoom = () => {
+     const id = Math.random().toString(36).substring(2, 8);
+     navigate(`/room/${id}`);
+   };
+
+   const joinRoom = () => {
+     if (!roomId.trim()) return;
+     navigate(`/room/${roomId}`);
+   };
+
+return (
+  
+
     <div className="home-page">
 
       {/* background glow */}
@@ -65,7 +140,7 @@ export default function Home() {
 
       <div className="home-card">
 
-        <h1 className="logo">
+        <h1 className="home-logo">
           WaveParty
         </h1>
 
@@ -105,5 +180,8 @@ export default function Home() {
       </div>
 
     </div>
-  );
-}
+   
+  
+);}
+
+
